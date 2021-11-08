@@ -1,12 +1,12 @@
 describe('Automation Practice', () => {
 
-    it('Verify', () => {
+    it('Visit the Base URL', () => {
 
         cy.visit('http://automationpractice.com/index.php');
         // peceg52664@epeva.com
         // testtest
     })
-    it('login',() =>{
+    it('E2E flow test for purchasing multiple products',() =>{
         cy.get('.login').click();
         cy.get('#email').type('peceg52664@epeva.com');
         cy.get('#passwd').type('testtest');
