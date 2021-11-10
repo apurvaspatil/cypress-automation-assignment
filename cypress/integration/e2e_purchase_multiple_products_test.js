@@ -1,14 +1,14 @@
+const cypressJson = require('../../cypress.json')
+
+
 describe('Automation Practice', () => {
     it('E2E flow test for purchasing multiple products',() =>{
 
         // Visit the Base URL
-        cy.visit('http://automationpractice.com/index.php');
+        cy.visit(cypressJson.baseUrl);
 
         // Click on login and enter valid credentials for login
-        cy.get('.login').click();
-        cy.get('#email').type('peceg52664@epeva.com');
-        cy.get('#passwd').type('testtest');
-        cy.get('#SubmitLogin').click();
+        cy.login(cypressJson.email, cypressJson.password);
 
         // Verify if correct username is displayed after logging in
         cy.get('.account').should("have.text","Test User");
